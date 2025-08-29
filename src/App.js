@@ -1,41 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
+import Header from "./Header";
+import Footer from "./Footer";
+import ThankYouSubscribe from "./ThankYouSubscribe";
+
 import "./App.css";
 
 export default function App() {
+  const [submitted, setSubmitted] = useState(false);
+
+  if (submitted) {
+    return <ThankYouSubscribe />;
+  }
   return (
     <div className="App">
-      <header>
-        <div className="container">
-          <div className="navbar">
-            <img src="/images/logo.svg" className="logo" alt="logo" />
-            <img
-              src="/images/menu.svg"
-              className="hamburger"
-              id="open-page"
-              alt="open"
-            />
-          </div>
-        </div>
-      </header>
-
-      <section className="menu-body" id="new-page">
-        <div className="cross-container">
-          <img
-            src="/images/cross.svg"
-            className="cross"
-            id="close-page"
-            alt="close"
-          />
-        </div>
-
-        <div className="menu-content">
-          <button>Home</button>
-          <button>About</button>
-          <button>Menu</button>
-          <button>Product</button>
-        </div>
-      </section>
-
+      <Header />
       <div className="hero">
         <video autoPlay muted loop id="bg-video">
           <source src="/images/bg-video.mp4" type="video/mp4" />
@@ -116,65 +94,7 @@ export default function App() {
         </div>
       </section>
 
-      <footer>
-        <div className="container">
-          <img src="/images/logo.svg" className="footer-logo" alt="logo" />
-          <div className="footer-information">
-            <div>
-              <p>Home</p>
-              <p>About</p>
-              <p>Menu</p>
-              <p>Product</p>
-            </div>
-
-            <div>
-              <p>08-100-200</p>
-              <p>10 Perth, St Perth</p>
-              <p>naturespa@gmail.com</p>
-            </div>
-
-            <div className="icons">
-              <a href="https://www.facebook.com">
-                <img
-                  src="/images/facebook.svg"
-                  className="icon"
-                  alt="facebook"
-                />
-              </a>
-              <a href="https://www.instagram.com">
-                <img
-                  src="/images/instagram.svg"
-                  className="icon"
-                  alt="instagram"
-                />
-              </a>
-              <a href="https://x.com">
-                <img src="/images/x.svg" className="icon" alt="x" />
-              </a>
-            </div>
-          </div>
-          <div className="subscribe-email">
-            <div className="subscribe">
-              <p>Subscribe</p>
-
-              <form className="email-input">
-                <input
-                  type="email"
-                  placeholder="Please enter your email.."
-                  className="email"
-                  id="email-input"
-                  required
-                />
-                <button>
-                  <img src="/images/arrow.svg" className="arrow" id="arrow" />
-                </button>
-              </form>
-            </div>
-          </div>
-
-          <p className="copyright">NATURE©2025</p>
-        </div>
-      </footer>
+      <Footer setSubmitted={setSubmitted} />
     </div>
   );
 }
