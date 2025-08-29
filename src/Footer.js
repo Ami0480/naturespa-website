@@ -57,7 +57,7 @@ export default function Footer({ setSubmitted }) {
           <div className="subscribe">
             <p>Subscribe</p>
 
-            <form className="email-input" onSubmit={handleSubscribe}>
+            <form className="email-input" onSubmit={handleSubscribe} noValidate>
               <input
                 type="email"
                 placeholder="Please enter your email.."
