@@ -1,9 +1,8 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import "./App.css";
 
-export default function ThankYouSubscribe() {
+export default function ThankYouBooking() {
   return (
     <div>
       <Header />
@@ -12,7 +11,10 @@ export default function ThankYouSubscribe() {
         <div className="container">
           <div className="content">
             <h1>Thank You.</h1>
-            <p>Subscribe for exclusive spa offers and wellness secrets.</p>
+            <p>
+              You will get an email shortly. We are looking forward to seeing
+              you!
+            </p>
           </div>
         </div>
       </div>

@@ -40,11 +40,10 @@ export default function App() {
               <span>Bliss</span>
             </h2>
             <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-              quae ab illo inventore veritatis et quasi architecto beatae vitae
-              dicta sunt explicabo. But I must explain to you how all this
-              mistaken idea of denouncing pleasure.
+              Let your mind unwind, your body regain its energy, and your spirit
+              feel light and refreshed, as every moment nurtures your inner
+              wellness, restores your vitality, and enhances your natural beauty
+              from within.”
             </p>
           </div>
         </div>
@@ -55,8 +54,11 @@ export default function App() {
           <div className="body-treatment">
             <h2>Body Treatment</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Treatments for the body help release tension, improve blood flow,
+              and restore energy. They promote healthier skin, support
+              flexibility, and ease stress. By caring for your body this way,
+              you boost overall wellness and feel more vibrant, balanced, and
+              refreshed.
             </p>
             <img
               src="/images/body-treatment.png"
@@ -73,8 +75,11 @@ export default function App() {
           <div className="facial-treatment">
             <h2>Facial Treatment</h2>
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Facial treatments help cleanse and nourish the skin, improving its
+              texture and natural glow. They support hydration, reduce signs of
+              stress, and refresh tired skin. By caring for your face this way,
+              you reveal a healthy, radiant complexion and feel renewed from the
+              inside out.
             </p>
             <img
               src="/images/facial-treatment.png"

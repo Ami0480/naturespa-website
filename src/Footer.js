@@ -36,7 +36,6 @@ export default function Footer({ setSubmitted }) {
             <p>10 Perth, St Perth</p>
             <p>naturespa@gmail.com</p>
           </div>
-
           <div className="icons">
             <a href="https://www.facebook.com">
               <img src="/images/facebook.svg" className="icon" alt="facebook" />
