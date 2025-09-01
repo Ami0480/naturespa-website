@@ -2,15 +2,35 @@ import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import ThankYouSubscribe from "./ThankYouSubscribe";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useNavigate,
+} from "react-router-dom";
+import Booking from "./Booking";
 
 import "./App.css";
 
 export default function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
+      </Routes>
+    </Router>
+  );
+}
+
+function Home() {
+  const navigate = useNavigate();
   const [submitted, setSubmitted] = useState(false);
 
   if (submitted) {
     return <ThankYouSubscribe />;
   }
+
   return (
     <div className="App">
       <Header />
@@ -21,7 +41,7 @@ export default function App() {
         <div className="video-overlay"></div>
         <div className="content">
           <h1>Nature Spa</h1>
-          <button>Book Now</button>
+          <button onClick={() => navigate("/booking")}>Book Now</button>
         </div>
       </div>
 
@@ -65,7 +85,7 @@ export default function App() {
               className="treatment-img"
               alt="body-treatment"
             />
-            <button>Book Now</button>
+            <button onClick={() => navigate("/booking")}>Book Now</button>
           </div>
         </div>
       </section>
@@ -86,7 +106,7 @@ export default function App() {
               className="treatment-img"
               alt="facial-treatment"
             />
-            <button>Book Now</button>
+            <button onClick={() => navigate("/booking")}>Book Now</button>
           </div>
         </div>
       </section>

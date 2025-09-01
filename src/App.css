@@ -196,6 +196,33 @@ button {
   z-index: 2;
   padding: 10vh;
 }
+
+.information {
+  margin-bottom: 20px;
+}
+.information-form {
+  position: relative;
+  width: 100%;
+  margin-bottom: -20px;
+}
+.information p {
+  margin: 0;
+}
+.information-input {
+  width: 100%;
+}
+
+.arrow-down {
+  position: absolute;
+  right: 10px;
+  top: 30%;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.booking-button {
+  margin-top: 40px;
+}
 h2 {
   font-size: 40px;
   line-height: 1.5;
