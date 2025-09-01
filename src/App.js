@@ -1,14 +1,15 @@
 import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import ThankYouSubscribe from "./ThankYouSubscribe";
 import {
   BrowserRouter as Router,
   Routes,
   Route,
   useNavigate,
 } from "react-router-dom";
+import Header from "./Header";
+import Footer from "./Footer";
+import ThankYouSubscribe from "./ThankYouSubscribe";
 import Booking from "./Booking";
+import ThankYouBooking from "./ThankYouBooking";
 
 import "./App.css";
 
@@ -18,6 +19,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
+        <Route path="/thankyoubooking" element={<ThankYouBooking />} />
       </Routes>
     </Router>
   );

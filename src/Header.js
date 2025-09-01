@@ -1,14 +1,29 @@
 import React, { useState } from "react";
+
+import { useNavigate } from "react-router-dom";
+
 import "./App.css";
 
 export default function Header() {
+  const navigate = useNavigate();
+
+  const clickLogo = (e) => {
+    e.preventDefault();
+    navigate("/");
+  };
+
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div>
       <header>
         <div className="container">
           <div className="navbar">
-            <img src="/images/logo.svg" className="logo" alt="logo" />
+            <img
+              src="/images/logo.svg"
+              className="logo"
+              alt="logo"
+              onClick={clickLogo}
+            />
             <img
               src="/images/menu.svg"
               className="hamburger"
@@ -35,6 +50,13 @@ export default function Header() {
           <button>About</button>
           <button>Menu</button>
           <button>Product</button>
+          <button
+            onClick={() => navigate("/booking")}
+            style={{ backgroundColor: "white" }}
+            className="nav-button"
+          >
+            Book Now
+          </button>
         </div>
       </section>
     </div>

@@ -141,7 +141,6 @@ header {
 
 .menu-content button:hover {
   background: none;
-  text-decoration: underline;
 }
 
 h1 {
@@ -162,6 +161,10 @@ button {
   border-radius: 100px;
   background: #af9b8e;
   color: white;
+}
+
+.nav-button {
+  color: #af9b8e;
 }
 
 #second-page-bg {

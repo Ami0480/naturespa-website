@@ -1,17 +1,24 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 export default function Booking() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/thankyoubooking");
+  };
+
   return (
     <div>
       <Header />
-
       <section>
         <div className="container">
           <div className="content-menu">
             <h1>Book an appointment</h1>
-            <form className="booking-form">
+            <form className="booking-form" onSubmit={handleSubmit}>
               <div className="information">
                 <p>First name</p>
                 <input type="text" className="information-input" />
