@@ -1,8 +1,15 @@
 import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useNavigate } from "react-router-dom";
 
 export default function About() {
+  const navigate = useNavigate();
+
+  const clickBook = () => {
+    navigate("/booking");
+  };
+
   return (
     <div>
       <Header />
@@ -15,7 +22,7 @@ export default function About() {
         />
         <div className="content">
           <h1>About</h1>
-          <button>Book Now</button>
+          <button onClick={clickBook}>Book Now</button>
         </div>
       </div>
       <section>

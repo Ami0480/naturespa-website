@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 
+import { useNavigate } from "react-router-dom";
+
 import "./App.css";
 
 export default function Footer({ setSubmitted }) {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
+
+  const clickLogo = () => {
+    navigate("/");
+    window.scrollTo(0, 0);
+  };
 
   const handleSubscribe = (e) => {
     e.preventDefault();
@@ -22,7 +30,12 @@ export default function Footer({ setSubmitted }) {
   return (
     <footer>
       <div className="container">
-        <img src="/images/logo.svg" className="footer-logo" alt="logo" />
+        <img
+          src="/images/logo.svg"
+          className="footer-logo"
+          alt="logo"
+          onClick={clickLogo}
+        />
         <div className="footer-information">
           <div>
             <p>Home</p>
