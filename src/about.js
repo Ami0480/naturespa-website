@@ -6,6 +6,18 @@ export default function About() {
   return (
     <div>
       <Header />
+      <div className="hero">
+        <div className="img-overlay"></div>
+        <img
+          src="images/about-main-bg.png"
+          className="about-main-bg"
+          alt="about-bg"
+        />
+        <div className="content">
+          <h1>About</h1>
+          <button>Book Now</button>
+        </div>
+      </div>
       <section>
         <div className="container">
           <div className="about-us">
