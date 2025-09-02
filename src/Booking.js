@@ -70,6 +70,7 @@ export default function Booking({ setSubmitted }) {
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -81,6 +82,7 @@ export default function Booking({ setSubmitted }) {
                   name="lastName"
                   value={formData.lastName}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -92,6 +94,7 @@ export default function Booking({ setSubmitted }) {
                   name="mobile"
                   value={formData.mobile}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -103,6 +106,7 @@ export default function Booking({ setSubmitted }) {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
@@ -113,6 +117,7 @@ export default function Booking({ setSubmitted }) {
                   name="treatment"
                   value={formData.treatment}
                   onChange={handleChange}
+                  required
                 >
                   <option value="">Select a treatment..</option>
                   <option value="relaxation">
@@ -159,6 +164,7 @@ export default function Booking({ setSubmitted }) {
                   name="therapist"
                   value={formData.therapist}
                   onChange={handleChange}
+                  required
                 >
                   <option value="">Select a therapist..</option>
                   <option value="any">Any therapist</option>
@@ -178,6 +184,7 @@ export default function Booking({ setSubmitted }) {
                   name="date"
                   value={formData.date}
                   onChange={handleChange}
+                  required
                 />
               </div>
 
