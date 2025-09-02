@@ -87,7 +87,14 @@ function Home() {
               className="treatment-img"
               alt="body-treatment"
             />
-            <button onClick={() => navigate("/booking")}>Book Now</button>
+            <button
+              onClick={() => {
+                navigate("/booking");
+                window.scrollTo(0, 0);
+              }}
+            >
+              Book Now
+            </button>
           </div>
         </div>
       </section>
@@ -108,7 +115,14 @@ function Home() {
               className="treatment-img"
               alt="facial-treatment"
             />
-            <button onClick={() => navigate("/booking")}>Book Now</button>
+            <button
+              onClick={() => {
+                navigate("/booking");
+                window.scrollTo(0, 0);
+              }}
+            >
+              Book Now
+            </button>
           </div>
         </div>
       </section>
