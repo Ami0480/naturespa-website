@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 import { useNavigate } from "react-router-dom";
 
 import "./App.css";
@@ -24,6 +23,7 @@ export default function Footer({ setSubmitted }) {
       alert("Please enter a valid email address");
     } else {
       setSubmitted(true);
+      setEmail("");
     }
   };
 
@@ -69,16 +69,17 @@ export default function Footer({ setSubmitted }) {
           <div className="subscribe">
             <p>Subscribe</p>
 
-            <form className="email-input" onSubmit={handleSubscribe} noValidate>
+            <form className="email-input" onSubmit={handleSubscribe}>
               <input
                 type="email"
                 placeholder="Please enter your email.."
                 className="email"
                 id="email-input"
+                value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 required
               />
-              <button>
+              <button type="submit">
                 <img src="/images/arrow.svg" className="arrow" id="arrow" />
               </button>
             </form>
