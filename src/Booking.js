@@ -7,6 +7,7 @@ export default function Booking({ setSubmitted }) {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
+    timestamp: "",
     firstName: "",
     lastName: "",
     mobile: "",
