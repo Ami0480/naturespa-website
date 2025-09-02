@@ -6,13 +6,12 @@ import "./App.css";
 
 export default function Header() {
   const navigate = useNavigate();
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const clickLogo = (e) => {
-    e.preventDefault();
+  const clickLogo = () => {
     navigate("/");
   };
 
-  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div>
       <header>
@@ -35,7 +34,7 @@ export default function Header() {
         </div>
       </header>
 
-      <section className={`menu-body ${menuOpen ? "open" : ""} id="new-page"`}>
+      <section className={`menu-body ${menuOpen ? "open" : ""} `} id="new-page">
         <div className="cross-container">
           <img
             src="/images/cross.svg"
@@ -46,15 +45,11 @@ export default function Header() {
           />
         </div>
         <div className="menu-content">
-          <button>Home</button>
-          <button>About</button>
-          <button>Menu</button>
-          <button>Product</button>
-          <button
-            onClick={() => navigate("/booking")}
-            style={{ backgroundColor: "white" }}
-            className="nav-button"
-          >
+          <button onClick={() => navigate("/")}>Home</button>
+          <button onClick={() => navigate("/about")}>About</button>
+          <button onClick={() => navigate("/menu")}>Menu</button>
+          <button onClick={() => navigate("/product")}>Product</button>
+          <button onClick={() => navigate("/booking")} className="nav-button">
             Book Now
           </button>
         </div>

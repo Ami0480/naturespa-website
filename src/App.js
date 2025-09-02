@@ -10,6 +10,9 @@ import Footer from "./Footer";
 import ThankYouSubscribe from "./ThankYouSubscribe";
 import Booking from "./Booking";
 import ThankYouBooking from "./ThankYouBooking";
+import About from "./About";
+import Menu from "./Menu";
+import Product from "./Product";
 
 import "./App.css";
 
@@ -20,6 +23,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/booking" element={<Booking />} />
         <Route path="/thankyoubooking" element={<ThankYouBooking />} />
+        <Route path="/About" element={<About />} />
+        <Route path="/Menu" element={<Menu />} />
+        <Route path="/Product" element={<Product />} />
       </Routes>
     </Router>
   );

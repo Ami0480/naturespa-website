@@ -33,6 +33,19 @@ header {
   position: relative;
   overflow: hidden;
   padding-bottom: 40px;
+  background: black;
+}
+
+.hero-menu .service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
 }
 
 .body-menu {
@@ -163,7 +176,9 @@ button {
   color: white;
 }
 
-.nav-button {
+.menu-content button.nav-button {
+  background: none;
+  background: white;
   color: #af9b8e;
 }
 
@@ -282,15 +297,6 @@ p {
   margin-bottom: 20px;
 }
 
-.service span {
-  font-family: "Lato", sans-serif;
-  font-style: normal;
-  font-size: 16px;
-  font-weight: lighter;
-  line-height: 1.5;
-  color: white;
-}
-
 .body-treatment {
   margin-top: 200px;
   color: #917a6b;
@@ -312,15 +318,6 @@ p {
   height: auto;
 }
 
-.menu-bg {
-  background: black;
-}
-
-.service {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 10px;
-}
 ul {
   margin: 0;
   padding: 0;
@@ -426,17 +423,18 @@ footer p {
   opacity: 0.7;
 }
 
+footer button {
+  padding: 0;
+  margin: 0;
+  height: 0;
+}
+
 .arrow {
   position: absolute;
   top: 8px;
   right: 0;
 }
 
-footer button {
-  padding: 0;
-  margin: 0;
-  height: 0;
-}
 .copyright {
   font-size: 8px;
 }
