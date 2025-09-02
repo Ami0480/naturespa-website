@@ -40,16 +40,20 @@ export default function Footer({ setSubmitted }) {
         />
         <div className="footer-information">
           <div>
-            <p>Home</p>
-            <p>About</p>
-            <p>Menu</p>
-            <p>Product</p>
+            <p onClick={() => navigate("/")}>Home</p>
+            <p onClick={() => navigate("/about")}>About</p>
+            <p onClick={() => navigate("/menu")}>Menu</p>
+            <p onClick={() => navigate("/product")}>Product</p>
           </div>
 
           <div>
             <p>08-100-200</p>
             <p>10 Perth, St Perth</p>
-            <p>naturespa@gmail.com</p>
+            <p>
+              <a href="mailto:naturespa@gmail.com" className="spa-email">
+                naturespa@gmail.com
+              </a>
+            </p>
           </div>
           <div className="icons">
             <a href="https://www.facebook.com">

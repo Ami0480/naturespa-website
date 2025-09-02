@@ -5,6 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function About({ setSubmitted }) {
   const navigate = useNavigate();
+  window.scrollTo(0, 0);
 
   const clickBook = () => {
     navigate("/booking");

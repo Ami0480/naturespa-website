@@ -425,6 +425,10 @@ footer p {
 .subscribe {
   width: 100%;
 }
+
+a.spa-email {
+  color: white;
+}
 .email-input {
   position: relative;
   margin-bottom: 20px;
