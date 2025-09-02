@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
@@ -6,8 +6,48 @@ import { useNavigate } from "react-router-dom";
 export default function Booking({ setSubmitted }) {
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    mobile: "",
+    email: "",
+    treatment: "",
+    therapist: "",
+    date: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    try {
+      await fetch(
+        "https://script.google.com/macros/s/AKfycbyFqV9jO92AaUbREHdYfsTADTBkyhMz571dgnT4nu8p-R7EygsK4gMtUelVfzvn4A3HQw/exec",
+        {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+      console.log("Booking sent to Google Sheets:", formData);
+    } catch (error) {
+      console.error("Error submitting to Google Sheets:", error);
+    }
+
+    if (setSubmitted) {
+      setSubmitted(true);
+    }
+
     navigate("/thankyoubooking");
     window.scrollTo(0, 0);
   };
@@ -15,6 +55,7 @@ export default function Booking({ setSubmitted }) {
   return (
     <div>
       <Header />
+
       <section>
         <div className="container">
           <div className="content-menu">
@@ -22,24 +63,56 @@ export default function Booking({ setSubmitted }) {
             <form className="booking-form" onSubmit={handleSubmit}>
               <div className="information">
                 <p>First name</p>
-                <input type="text" className="information-input" />
+                <input
+                  type="text"
+                  className="information-input"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                />
               </div>
+
               <div className="information">
                 <p>Last name</p>
-                <input type="text" className="information-input" />
+                <input
+                  type="text"
+                  className="information-input"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                />
               </div>
+
               <div className="information">
                 <p>Mobile</p>
-                <input type="tel" className="information-input" />
+                <input
+                  type="tel"
+                  className="information-input"
+                  name="mobile"
+                  value={formData.mobile}
+                  onChange={handleChange}
+                />
               </div>
+
               <div className="information">
                 <p>Email</p>
-                <input type="email" className="information-input" />
+                <input
+                  type="email"
+                  className="information-input"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
               </div>
+
               <div className="information">
                 <p>What treatment would you like?</p>
-
-                <select className="information-input">
+                <select
+                  className="information-input"
+                  name="treatment"
+                  value={formData.treatment}
+                  onChange={handleChange}
+                >
                   <option value="">Select a treatment..</option>
                   <option value="relaxation">
                     Full Body Relaxation Massage - 60min ($140)
@@ -61,7 +134,6 @@ export default function Booking({ setSubmitted }) {
                   <option value="Head-toe">
                     Head to Toe Massage- 120min ($210)
                   </option>
-
                   <option value="Calm">Calm Facial- 60min ($210)</option>
                   <option value="Rejuvinate">
                     Rejuvinate Facial - 60min ($210)
@@ -81,12 +153,17 @@ export default function Booking({ setSubmitted }) {
 
               <div className="information">
                 <p>Preferred therapist</p>
-                <select className="information-input">
+                <select
+                  className="information-input"
+                  name="therapist"
+                  value={formData.therapist}
+                  onChange={handleChange}
+                >
                   <option value="">Select a therapist..</option>
                   <option value="any">Any therapist</option>
                   <option value="sarah">Sarah</option>
-                  <option value="michael">Amy</option>
-                  <option value="michael">Chloe</option>
+                  <option value="amy">Amy</option>
+                  <option value="chloe">Chloe</option>
                   <option value="michael">Michael</option>
                   <option value="emma">Emma</option>
                 </select>
@@ -94,13 +171,13 @@ export default function Booking({ setSubmitted }) {
 
               <div className="information">
                 <p>When would you like to visit?</p>
-                <div className="information-form">
-                  <input
-                    type="date"
-                    className="information-input"
-                    placeholder="Select a date.."
-                  />
-                </div>
+                <input
+                  type="date"
+                  className="information-input"
+                  name="date"
+                  value={formData.date}
+                  onChange={handleChange}
+                />
               </div>
 
               <button type="submit" className="booking-button">
