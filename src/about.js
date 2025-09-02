@@ -3,11 +3,12 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 
-export default function About() {
+export default function About({ setSubmitted }) {
   const navigate = useNavigate();
 
   const clickBook = () => {
     navigate("/booking");
+    window.scrollTo(0, 0);
   };
 
   return (
@@ -42,7 +43,7 @@ export default function About() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer setSubmitted={setSubmitted} />
     </div>
   );
 }

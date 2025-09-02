@@ -23,6 +23,8 @@ export default function Footer({ setSubmitted }) {
       alert("Please enter a valid email address");
     } else {
       setSubmitted(true);
+      navigate("/thankyousubscribe");
+      window.scrollTo(0, 0);
       setEmail("");
     }
   };

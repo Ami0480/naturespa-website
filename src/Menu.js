@@ -3,7 +3,7 @@ import Header from "./Header";
 import Footer from "./Footer";
 import { useNavigate } from "react-router-dom";
 
-export default function Menu() {
+export default function Menu({ setSubmitted }) {
   const navigate = useNavigate();
 
   const clickBook = () => {
@@ -85,7 +85,7 @@ export default function Menu() {
           <button onClick={clickBook}>Book Now</button>
         </div>
       </div>
-      <Footer />
+      <Footer setSubmitted={setSubmitted} />
     </div>
   );
 }

@@ -17,24 +17,37 @@ import Product from "./Product";
 import "./App.css";
 
 export default function App() {
+  const [submitted, setSubmitted] = useState(false);
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/booking" element={<Booking />} />
-        <Route path="/thankyoubooking" element={<ThankYouBooking />} />
-        <Route path="/thankyousubscribe" element={<ThankYouSubscribe />} />
-        <Route path="/About" element={<About />} />
-        <Route path="/Menu" element={<Menu />} />
-        <Route path="/Product" element={<Product />} />
+        <Route path="/" element={<Home setSubmitted={setSubmitted} />} />
+        <Route
+          path="/booking"
+          element={<Booking setSubmitted={setSubmitted} />}
+        />
+        <Route
+          path="/thankyoubooking"
+          element={<ThankYouBooking setSubmitted={setSubmitted} />}
+        />
+        <Route
+          path="/thankyousubscribe"
+          element={<ThankYouSubscribe setSubmitted={setSubmitted} />}
+        />
+        <Route path="/About" element={<About setSubmitted={setSubmitted} />} />
+        <Route path="/Menu" element={<Menu setSubmitted={setSubmitted} />} />
+        <Route
+          path="/Product"
+          element={<Product setSubmitted={setSubmitted} />}
+        />
       </Routes>
     </Router>
   );
 }
 
-function Home() {
+function Home({ submitted, setSubmitted }) {
   const navigate = useNavigate();
-  const [submitted, setSubmitted] = useState(false);
+  window.scrollTo(0, 0);
 
   if (submitted) {
     return <ThankYouSubscribe />;

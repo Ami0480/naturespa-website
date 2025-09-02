@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function ThankYouSubscribe() {
+export default function ThankYouSubscribe({ setSubmitted }) {
   return (
     <div>
       <Header />
@@ -16,7 +16,7 @@ export default function ThankYouSubscribe() {
         </div>
       </div>
 
-      <Footer />
+      <Footer setSubmitted={setSubmitted} />
     </div>
   );
 }

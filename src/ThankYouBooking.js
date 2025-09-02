@@ -2,7 +2,7 @@ import React from "react";
 import Header from "./Header";
 import Footer from "./Footer";
 
-export default function ThankYouBooking() {
+export default function ThankYouBooking({ setSubmitted }) {
   return (
     <div>
       <Header />
@@ -19,7 +19,7 @@ export default function ThankYouBooking() {
         </div>
       </div>
 
-      <Footer />
+      <Footer setSubmitted={setSubmitted} />
     </div>
   );
 }
