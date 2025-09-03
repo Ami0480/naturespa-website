@@ -10,7 +10,7 @@ import Footer from "./Footer";
 import ThankYouSubscribe from "./ThankYouSubscribe";
 import Booking from "./Booking";
 import ThankYouBooking from "./ThankYouBooking";
-import About from "./About.js";
+import About from "./About";
 import Menu from "./Menu";
 import Product from "./Product";
 

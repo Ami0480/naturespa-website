@@ -462,3 +462,10 @@ footer button {
 a {
   text-decoration: none;
 }
+
+@media (min-width: 1024px) {
+  #bg-video {
+    width: 100%;
+    height: 100%;
+  }
+}
