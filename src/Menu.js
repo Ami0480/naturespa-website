@@ -65,9 +65,9 @@ export default function Menu({ setSubmitted }) {
               <h3>Body Treatment</h3>
               {bodyTreatments.map((service, index) => (
                 <div className="service" key={index}>
-                  <span>{service.name}</span>
-                  <span>{service.duration}</span>
-                  <span>{service.price}</span>
+                  <span className="service-name">{service.name}</span>
+                  <span className="service-duration">{service.duration}</span>
+                  <span className="service-price">{service.price}</span>
                 </div>
               ))}
             </div>
@@ -76,9 +76,9 @@ export default function Menu({ setSubmitted }) {
               <h3>Facial Treatment</h3>
               {facialTreatments.map((service, index) => (
                 <div className="service" key={index}>
-                  <span>{service.name}</span>
-                  <span>{service.duration}</span>
-                  <span>{service.price}</span>
+                  <span className="service-name">{service.name}</span>
+                  <span className="service-duration">{service.duration}</span>
+                  <span className="service-price">{service.price}</span>
                 </div>
               ))}
             </div>
