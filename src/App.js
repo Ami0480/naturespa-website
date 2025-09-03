@@ -34,10 +34,10 @@ export default function App() {
           path="/thankyousubscribe"
           element={<ThankYouSubscribe setSubmitted={setSubmitted} />}
         />
-        <Route path="/About" element={<About setSubmitted={setSubmitted} />} />
-        <Route path="/Menu" element={<Menu setSubmitted={setSubmitted} />} />
+        <Route path="/about" element={<About setSubmitted={setSubmitted} />} />
+        <Route path="/menu" element={<Menu setSubmitted={setSubmitted} />} />
         <Route
-          path="/Product"
+          path="/product"
           element={<Product setSubmitted={setSubmitted} />}
         />
       </Routes>
