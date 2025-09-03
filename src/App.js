@@ -17,7 +17,7 @@ import Product from "./Product";
 import "./App.css";
 
 export default function App() {
-  const [submitted, setSubmitted] = useState(false);
+  const [, setSubmitted] = useState(false);
   return (
     <Router>
       <Routes>
