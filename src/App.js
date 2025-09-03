@@ -69,11 +69,7 @@ function Home({ submitted, setSubmitted }) {
 
       <section>
         <div className="container">
-          <img
-            src="/images/second-page-bg.png"
-            id="second-page-bg"
-            alt="second-bg"
-          />
+          <img src="/images/second-page-bg.png" id="second-page-bg" alt="" />
           <div className="second-page-overlay"></div>
           <div className="second-page-content">
             <h2 className="second-page-words">
@@ -105,7 +101,7 @@ function Home({ submitted, setSubmitted }) {
             <img
               src="/images/body-treatment.png"
               className="treatment-img"
-              alt="body-treatment"
+              alt=""
             />
             <button
               onClick={() => {
@@ -133,7 +129,7 @@ function Home({ submitted, setSubmitted }) {
             <img
               src="/images/facial-treatment.png"
               className="treatment-img"
-              alt="facial-treatment"
+              alt=""
             />
             <button
               onClick={() => {
@@ -149,7 +145,7 @@ function Home({ submitted, setSubmitted }) {
 
       <section className="enjoy">
         <div className="container">
-          <img src="/images/enjoy-bg.png" id="enjoy-bg" alt="enjoy-bg" />
+          <img src="/images/enjoy-bg.png" id="enjoy-bg" alt="" />
           <div className="enjoy-overlay"></div>
           <h2 className="enjoy-content">Enjoy your journey</h2>
         </div>

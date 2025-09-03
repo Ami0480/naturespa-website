@@ -20,7 +20,7 @@ export default function Product({ setSubmitted }) {
         <img
           src="images/product-main-bg.png"
           className="about-main-bg"
-          alt="about-bg"
+          alt=""
         />
         <div className="content">
           <h1>Product</h1>

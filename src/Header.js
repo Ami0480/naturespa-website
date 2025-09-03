@@ -20,14 +20,14 @@ export default function Header() {
             <img
               src="/images/logo.svg"
               className="logo"
-              alt="logo"
+              alt=""
               onClick={clickLogo}
             />
             <img
               src="/images/menu.svg"
               className="hamburger"
               id="open-page"
-              alt="open"
+              alt=""
               onClick={() => setMenuOpen(true)}
             />
           </div>
@@ -40,7 +40,7 @@ export default function Header() {
             src="/images/cross.svg"
             className="cross"
             id="close-page"
-            alt="close"
+            alt=""
             onClick={() => setMenuOpen(false)}
           />
         </div>

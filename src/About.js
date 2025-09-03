@@ -17,11 +17,7 @@ export default function About({ setSubmitted }) {
       <Header />
       <div className="hero">
         <div className="img-overlay"></div>
-        <img
-          src="images/about-main-bg.png"
-          className="about-main-bg"
-          alt="about-bg"
-        />
+        <img src="images/about-main-bg.png" className="about-main-bg" alt="" />
         <div className="content">
           <h1>About</h1>
           <button onClick={clickBook}>Book Now</button>

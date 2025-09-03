@@ -35,7 +35,7 @@ export default function Footer({ setSubmitted }) {
         <img
           src="/images/logo.svg"
           className="footer-logo"
-          alt="logo"
+          alt=""
           onClick={clickLogo}
         />
         <div className="footer-information">
@@ -57,17 +57,13 @@ export default function Footer({ setSubmitted }) {
           </div>
           <div className="icons">
             <a href="https://www.facebook.com">
-              <img src="/images/facebook.svg" className="icon" alt="facebook" />
+              <img src="/images/facebook.svg" className="icon" alt="" />
             </a>
             <a href="https://www.instagram.com">
-              <img
-                src="/images/instagram.svg"
-                className="icon"
-                alt="instagram"
-              />
+              <img src="/images/instagram.svg" className="icon" alt="" />
             </a>
             <a href="https://x.com">
-              <img src="/images/x.svg" className="icon" alt="x" />
+              <img src="/images/x.svg" className="icon" alt="" />
             </a>
           </div>
         </div>
