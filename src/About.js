@@ -36,7 +36,7 @@ export default function About({ setSubmitted }) {
               ensure that each visit is not only restorative for the body and
               mind, but also a special experience designed just for you.
             </p>
-            <img src="images/about-us.png" className="about-us-img" />
+            <img src="images/about-us.png" className="about-us-img" alt="" />
           </div>
         </div>
       </section>

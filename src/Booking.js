@@ -198,7 +198,7 @@ export default function Booking({ setSubmitted }) {
 
       <section className="enjoy">
         <div className="container">
-          <img src="images/relax-refresh-renew.png" id="enjoy-bg" />
+          <img src="images/relax-refresh-renew.png" id="enjoy-bg" alt="" />
           <div className="rrr-overlay"></div>
           <h2 className="rrr-content">Relax, Refresh, Renew</h2>
         </div>

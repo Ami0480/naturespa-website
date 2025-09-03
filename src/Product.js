@@ -40,7 +40,7 @@ export default function Product({ setSubmitted }) {
               respect the environment. Each product reflects our commitment to
               purity, transparency, and uncompromising quality.
             </p>
-            <img src="images/product.png" className="about-us-img" />
+            <img src="images/product.png" className="about-us-img" alt="" />
           </div>
         </div>
       </section>

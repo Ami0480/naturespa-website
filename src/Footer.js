@@ -82,7 +82,12 @@ export default function Footer({ setSubmitted }) {
                 required
               />
               <button type="submit">
-                <img src="/images/arrow.svg" className="arrow" id="arrow" />
+                <img
+                  src="/images/arrow.svg"
+                  className="arrow"
+                  id="arrow"
+                  alt=""
+                />
               </button>
             </form>
           </div>
