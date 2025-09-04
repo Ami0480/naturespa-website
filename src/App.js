@@ -57,7 +57,7 @@ function Home({ submitted, setSubmitted }) {
     <div className="App">
       <Header />
       <div className="hero">
-        <video autoPlay muted loop id="bg-video">
+        <video autoPlay muted loop playsInline id="bg-video">
           <source src="/images/bg-video.mp4" type="video/mp4" />
         </video>
         <div className="video-overlay"></div>

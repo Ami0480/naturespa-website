@@ -54,17 +54,17 @@ export default function Footer({ setSubmitted }) {
                 naturespa@gmail.com
               </a>
             </p>
-          </div>
-          <div className="icons">
-            <a href="https://www.facebook.com">
-              <img src="/images/facebook.svg" className="icon" alt="" />
-            </a>
-            <a href="https://www.instagram.com">
-              <img src="/images/instagram.svg" className="icon" alt="" />
-            </a>
-            <a href="https://x.com">
-              <img src="/images/x.svg" className="icon" alt="" />
-            </a>
+            <div className="icons">
+              <a href="https://www.facebook.com">
+                <img src="/images/facebook.svg" className="icon" alt="" />
+              </a>
+              <a href="https://www.instagram.com">
+                <img src="/images/instagram.svg" className="icon" alt="" />
+              </a>
+              <a href="https://x.com">
+                <img src="/images/x.svg" className="icon" alt="" />
+              </a>
+            </div>
           </div>
         </div>
         <div className="subscribe-email">
