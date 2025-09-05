@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Booking({ setSubmitted }) {
+  const navigate = useNavigate();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -49,11 +50,8 @@ export default function Booking({ setSubmitted }) {
 
     if (setSubmitted) {
       setSubmitted(true);
+      navigate("/thankyoubooking");
     }
-
-    <Link to="/thankyoubooking" className="button-link">
-      Book Now
-    </Link>;
   };
 
   return (
@@ -191,9 +189,9 @@ export default function Booking({ setSubmitted }) {
                 />
               </div>
 
-              <Link to="/booking" className="button-link">
+              <button type="submit" className="button-link">
                 Book Now
-              </Link>
+              </button>
             </form>
           </div>
         </div>

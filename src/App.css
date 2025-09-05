@@ -212,8 +212,17 @@ a.button-link {
   font-family: "Lato", sans-serif;
   font-style: normal;
   font-weight: bold;
-  width: 140px;
-  height: 45px;
+  font-size: 16px;
+  border: 0;
+  padding: 13px;
+  border-radius: 100px;
+  background: #af9b8e;
+  color: white;
+}
+button.button-link {
+  font-family: "Lato", sans-serif;
+  font-style: normal;
+  font-weight: bold;
   font-size: 16px;
   border: 0;
   padding: 13px;
@@ -244,7 +253,7 @@ a.button-link-open-booking {
   font-weight: bold;
   color: #917a6b;
   background: white;
-  width: 140px;
+  width: 100px;
   height: 45px;
   font-size: 16px;
   border: 0;
