@@ -9,9 +9,7 @@ export default function Footer({ setSubmitted }) {
   }, []);
   const [email, setEmail] = useState("");
 
-  const clickLogo = () => {
-    <Link to="/" className="button-link"></Link>;
-  };
+  <Link to="/" className="button-link"></Link>;
 
   const handleSubscribe = (e) => {
     e.preventDefault();
