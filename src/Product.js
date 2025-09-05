@@ -8,11 +8,9 @@ export default function Product({ setSubmitted }) {
     window.scrollTo(0, 0);
   }, []);
 
-  const clickBook = () => {
-    <Link to="/booking" className="button-link">
-      Book Now
-    </Link>;
-  };
+  <Link to="/booking" className="button-link">
+    Book Now
+  </Link>;
 
   return (
     <div>
