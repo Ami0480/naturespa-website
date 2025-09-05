@@ -35,16 +35,16 @@ export default function Footer({ setSubmitted }) {
         </Link>
         <div className="footer-information">
           <div className="footer-link">
-            <Link to="/" className="button-link">
+            <Link to="/" className="button-link-footer">
               Home
             </Link>
-            <Link to="/about" className="button-link">
+            <Link to="/about" className="button-link-footer">
               About
             </Link>
-            <Link to="/menu" className="button-link">
+            <Link to="/menu" className="button-link-footer">
               Menu
             </Link>
-            <Link to="/product" className="button-link">
+            <Link to="/product" className="button-link-footer">
               Product
             </Link>
           </div>
