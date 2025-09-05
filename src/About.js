@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function About({ setSubmitted }) {
-  const navigate = useNavigate();
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const clickBook = () => {
-    navigate("/booking");
-    window.scrollTo(0, 0);
+    <Link to="/booking" className="button-link">
+      Book Now
+    </Link>;
   };
 
   return (
@@ -20,7 +21,9 @@ export default function About({ setSubmitted }) {
         <img src="images/about-main-bg.png" className="about-main-bg" alt="" />
         <div className="content">
           <h1>About</h1>
-          <button onClick={clickBook}>Book Now</button>
+          <Link to="/booking" className="button-link">
+            Book Now
+          </Link>
         </div>
       </div>
       <section>

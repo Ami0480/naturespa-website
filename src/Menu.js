@@ -1,15 +1,17 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Menu({ setSubmitted }) {
-  const navigate = useNavigate();
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const clickBook = () => {
-    navigate("/booking");
-    window.scrollTo(0, 0);
+    <Link to="/booking" className="button-link">
+      Book Now
+    </Link>;
   };
 
   const bodyTreatments = [
@@ -83,7 +85,9 @@ export default function Menu({ setSubmitted }) {
               ))}
             </div>
           </div>
-          <button onClick={clickBook}>Book Now</button>
+          <Link to="/booking" className="button-link">
+            Book Now
+          </Link>
         </div>
       </div>
       <Footer setSubmitted={setSubmitted} />

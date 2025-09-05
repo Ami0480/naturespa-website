@@ -1,15 +1,16 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./App.css";
 
 export default function Footer({ setSubmitted }) {
-  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [email, setEmail] = useState("");
 
   const clickLogo = () => {
-    navigate("/");
-    window.scrollTo(0, 0);
+    <Link to="/" className="button-link"></Link>;
   };
 
   const handleSubscribe = (e) => {
@@ -23,8 +24,7 @@ export default function Footer({ setSubmitted }) {
       alert("Please enter a valid email address");
     } else {
       setSubmitted(true);
-      navigate("/thankyousubscribe");
-      window.scrollTo(0, 0);
+      <Link to="/thankyousubscribe" className="button-link"></Link>;
       setEmail("");
     }
   };
@@ -32,18 +32,23 @@ export default function Footer({ setSubmitted }) {
   return (
     <footer>
       <div className="container">
-        <img
-          src="/images/logo.svg"
-          className="footer-logo"
-          alt=""
-          onClick={clickLogo}
-        />
+        <Link to="/">
+          <img src="/images/logo.svg" className="footer-logo" alt="" />
+        </Link>
         <div className="footer-information">
-          <div>
-            <p onClick={() => navigate("/")}>Home</p>
-            <p onClick={() => navigate("/about")}>About</p>
-            <p onClick={() => navigate("/menu")}>Menu</p>
-            <p onClick={() => navigate("/product")}>Product</p>
+          <div className="footer-link">
+            <Link to="/" className="button-link">
+              Home
+            </Link>
+            <Link to="/about" className="button-link">
+              About
+            </Link>
+            <Link to="/menu" className="button-link">
+              Menu
+            </Link>
+            <Link to="/product" className="button-link">
+              Product
+            </Link>
           </div>
 
           <div>

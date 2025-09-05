@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import Footer from "./Footer";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function Booking({ setSubmitted }) {
-  const navigate = useNavigate();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [formData, setFormData] = useState({
     timestamp: "",
@@ -49,8 +51,9 @@ export default function Booking({ setSubmitted }) {
       setSubmitted(true);
     }
 
-    navigate("/thankyoubooking");
-    window.scrollTo(0, 0);
+    <Link to="/thankyoubooking" className="button-link">
+      Book Now
+    </Link>;
   };
 
   return (
@@ -188,9 +191,9 @@ export default function Booking({ setSubmitted }) {
                 />
               </div>
 
-              <button type="submit" className="booking-button">
+              <Link to="/booking" className="button-link">
                 Book Now
-              </button>
+              </Link>
             </form>
           </div>
         </div>

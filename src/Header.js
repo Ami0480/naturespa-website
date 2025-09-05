@@ -1,28 +1,22 @@
-import React, { useState } from "react";
-
-import { useNavigate } from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 import "./App.css";
 
 export default function Header() {
-  const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
-
-  const clickLogo = () => {
-    navigate("/");
-  };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <div>
       <header>
         <div className="container">
           <div className="navbar">
-            <img
-              src="/images/logo.svg"
-              className="logo"
-              alt=""
-              onClick={clickLogo}
-            />
+            <Link to="/">
+              <img src="/images/logo.svg" className="logo" alt="" />
+            </Link>
             <img
               src="/images/menu.svg"
               className="hamburger"
@@ -31,16 +25,21 @@ export default function Header() {
               onClick={() => setMenuOpen(true)}
             />
             <div className="navbar-desktop desktop-only">
-              <button onClick={() => navigate("/")}>Home</button>
-              <button onClick={() => navigate("/about")}>About</button>
-              <button onClick={() => navigate("/menu")}>Menu</button>
-              <button onClick={() => navigate("/product")}>Product</button>
-              <button
-                onClick={() => navigate("/booking")}
-                className="nav-button"
-              >
+              <Link to="/" className="button-link">
+                Home
+              </Link>
+              <Link to="/about" className="button-link">
+                About
+              </Link>
+              <Link to="/menu" className="button-link">
+                Menu
+              </Link>
+              <Link to="/product" className="button-link">
+                Product
+              </Link>
+              <Link to="/booking" className="button-link">
                 Book Now
-              </button>
+              </Link>
             </div>
           </div>
         </div>
@@ -59,13 +58,21 @@ export default function Header() {
             />
           </div>
           <div className="navbar-desktop mobile-only">
-            <button onClick={() => navigate("/")}>Home</button>
-            <button onClick={() => navigate("/about")}>About</button>
-            <button onClick={() => navigate("/menu")}>Menu</button>
-            <button onClick={() => navigate("/product")}>Product</button>
-            <button onClick={() => navigate("/booking")} className="nav-button">
+            <Link to="/" className="button-link-open">
+              Home
+            </Link>
+            <Link to="/about" className="button-link-open">
+              About
+            </Link>
+            <Link to="/menu" className="button-link-open">
+              Menu
+            </Link>
+            <Link to="/product" className="button-link-open">
+              Product
+            </Link>
+            <Link to="/booking" className="button-link-open-booking">
               Book Now
-            </button>
+            </Link>
           </div>
         </section>
       </header>

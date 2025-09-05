@@ -1,10 +1,6 @@
-import React, { useState } from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  useNavigate,
-} from "react-router-dom";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import ThankYouSubscribe from "./ThankYouSubscribe";
@@ -17,11 +13,14 @@ import Product from "./Product";
 import "./App.css";
 
 export default function App() {
-  const [, setSubmitted] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home setSubmitted={setSubmitted} />} />
+        <Route
+          path="/"
+          element={<Home submitted={submitted} setSubmitted={setSubmitted} />}
+        />
         <Route
           path="/booking"
           element={<Booking setSubmitted={setSubmitted} />}
@@ -46,8 +45,9 @@ export default function App() {
 }
 
 function Home({ submitted, setSubmitted }) {
-  const navigate = useNavigate();
-  window.scrollTo(0, 0);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   if (submitted) {
     return <ThankYouSubscribe />;
@@ -63,7 +63,9 @@ function Home({ submitted, setSubmitted }) {
         <div className="video-overlay"></div>
         <div className="content">
           <h1>Nature Spa</h1>
-          <button onClick={() => navigate("/booking")}>Book Now</button>
+          <Link to="/booking" className="button-link">
+            Book Now
+          </Link>
         </div>
       </div>
 
@@ -103,14 +105,10 @@ function Home({ submitted, setSubmitted }) {
               className="treatment-img"
               alt=""
             />
-            <button
-              onClick={() => {
-                navigate("/booking");
-                window.scrollTo(0, 0);
-              }}
-            >
+
+            <Link to="/booking" className="button-link">
               Book Now
-            </button>
+            </Link>
           </div>
         </div>
       </section>
@@ -131,14 +129,9 @@ function Home({ submitted, setSubmitted }) {
               className="treatment-img"
               alt=""
             />
-            <button
-              onClick={() => {
-                navigate("/booking");
-                window.scrollTo(0, 0);
-              }}
-            >
+            <Link to="/booking" className="button-link">
               Book Now
-            </button>
+            </Link>
           </div>
         </div>
       </section>
