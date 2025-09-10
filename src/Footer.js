@@ -66,13 +66,21 @@ export default function Footer({ setSubmitted }) {
                   </p>
                 </div>
                 <div className="icons">
-                  <a href="https://www.facebook.com" target="_blank">
+                  <a
+                    href="https://www.facebook.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img src="/images/facebook.svg" className="icon" alt="" />
                   </a>
-                  <a href="https://www.instagram.com" target="_blank">
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <img src="/images/instagram.svg" className="icon" alt="" />
                   </a>
-                  <a href="https://x.com" target="_blank">
+                  <a href="https://x.com" target="_blank" rel="noreferrer">
                     <img src="/images/x.svg" className="icon" alt="" />
                   </a>
                 </div>
