@@ -264,12 +264,6 @@ a.button-link.button-link--white:hover {
   z-index: 1;
 }
 
-.rrr-content {
-  position: relative;
-  z-index: 2;
-  padding: 10vh;
-}
-
 .information {
   margin-bottom: 20px;
 }
@@ -533,6 +527,17 @@ a {
   h2 {
     font-size: 64px;
   }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  .service {
+    font-size: 24px;
+  }
+  .service-price {
+    margin-left: 50px;
+  }
   .logo {
     width: 30px;
     height: auto;
@@ -730,6 +735,13 @@ a {
     display: flex;
     align-items: center;
   }
+  .enjoy-overlay.booking {
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.9) 0%,
+      transparent 30%
+    );
+  }
 
   .about-us {
     display: flex;
@@ -748,6 +760,27 @@ a {
   .about-us-img {
     display: flex;
     flex: 1;
+  }
+  .content-menu {
+    margin-top: 100px;
+    margin-bottom: 50px;
+  }
+  .forms {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+  }
+  .information {
+    width: 100%;
+  }
+  .forms-date {
+    width: 48%;
+    margin-bottom: 50px;
+  }
+
+  .content p {
+    text-align: center;
+    margin-top: 40px;
   }
 
   .footer-logo {
