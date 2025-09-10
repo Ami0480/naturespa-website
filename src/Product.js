@@ -32,17 +32,32 @@ export default function Product({ setSubmitted }) {
       <section>
         <div className="container">
           <div className="about-us">
-            <h2>Our product</h2>
-            <p>
-              Our products are carefully crafted using only organic and natural
-              ingredients, ensuring they remain completely free from harmful
-              chemicals, synthetic substances, and artificial additives. By
-              staying true to nature, we provide safe, sustainable, and
-              authentic solutions that not only support your well-being but also
-              respect the environment. Each product reflects our commitment to
-              purity, transparency, and uncompromising quality.
-            </p>
-            <img src="images/product.png" className="about-us-img" alt="" />
+            <div className="about">
+              <h2>Our product</h2>
+              <p>
+                Our products are carefully crafted using only organic and
+                natural ingredients, ensuring they remain completely free from
+                harmful chemicals, synthetic substances, and artificial
+                additives. By staying true to nature, we provide safe,
+                sustainable, and authentic solutions that not only support your
+                well-being but also respect the environment. Each product
+                reflects our commitment to purity, transparency, and
+                uncompromising quality.
+              </p>
+            </div>
+
+            <div className="about-us-img-container">
+              <img
+                src="images/product.png"
+                className="about-us-img first"
+                alt=""
+              />
+              <img
+                src="images/product-img-second-one.png"
+                className="about-us-img second"
+                alt=""
+              />
+            </div>
           </div>
         </div>
       </section>
