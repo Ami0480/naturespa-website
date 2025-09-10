@@ -30,69 +30,79 @@ export default function Footer({ setSubmitted }) {
   return (
     <footer>
       <div className="container">
-        <Link to="/">
-          <img src="/images/logo.svg" className="footer-logo" alt="" />
-        </Link>
-        <div className="footer-information">
-          <div className="footer-link">
-            <Link to="/" className="button-link-footer">
-              Home
+        <div className="footer-container">
+          <div className="footer-logo-text">
+            <Link to="/">
+              <img src="/images/logo.svg" className="footer-logo" alt="" />
             </Link>
-            <Link to="/about" className="button-link-footer">
-              About
-            </Link>
-            <Link to="/menu" className="button-link-footer">
-              Menu
-            </Link>
-            <Link to="/product" className="button-link-footer">
-              Product
-            </Link>
+            <div className="footer-text desktop-only">Nature Spa</div>
           </div>
 
-          <div>
-            <p>08-100-200</p>
-            <p>10 Perth, St Perth</p>
-            <p>
-              <a href="mailto:naturespa@gmail.com" className="spa-email">
-                naturespa@gmail.com
-              </a>
-            </p>
-            <div className="icons">
-              <a href="https://www.facebook.com">
-                <img src="/images/facebook.svg" className="icon" alt="" />
-              </a>
-              <a href="https://www.instagram.com">
-                <img src="/images/instagram.svg" className="icon" alt="" />
-              </a>
-              <a href="https://x.com">
-                <img src="/images/x.svg" className="icon" alt="" />
-              </a>
+          <div className="footer-informations">
+            <div className="footer-information">
+              <div className="footer-link">
+                <Link to="/" className="button-link-footer">
+                  Home
+                </Link>
+                <Link to="/about" className="button-link-footer">
+                  About
+                </Link>
+                <Link to="/menu" className="button-link-footer">
+                  Menu
+                </Link>
+                <Link to="/product" className="button-link-footer">
+                  Product
+                </Link>
+              </div>
+
+              <div className="footer-contacts">
+                <div className="footer-contact">
+                  <p>08-100-200</p>
+                  <p>10 Perth, St Perth</p>
+                  <p>
+                    <a href="mailto:naturespa@gmail.com" className="spa-email">
+                      naturespa@gmail.com
+                    </a>
+                  </p>
+                </div>
+                <div className="icons">
+                  <a href="https://www.facebook.com">
+                    <img src="/images/facebook.svg" className="icon" alt="" />
+                  </a>
+                  <a href="https://www.instagram.com">
+                    <img src="/images/instagram.svg" className="icon" alt="" />
+                  </a>
+                  <a href="https://x.com">
+                    <img src="/images/x.svg" className="icon" alt="" />
+                  </a>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-        <div className="subscribe-email">
-          <div className="subscribe">
-            <p>Subscribe</p>
+            <div className="subscribe-email">
+              <div className="subscribe">
+                <p>Subscribe</p>
 
-            <form className="email-input" onSubmit={handleSubscribe}>
-              <input
-                type="email"
-                placeholder="Please enter your email.."
-                className="email"
-                id="email-input"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-              <button type="submit">
-                <img
-                  src="/images/arrow.svg"
-                  className="arrow"
-                  id="arrow"
-                  alt=""
-                />
-              </button>
-            </form>
+                <form className="email-input" onSubmit={handleSubscribe}>
+                  <input
+                    type="email"
+                    placeholder="Please enter your email.."
+                    className="email"
+                    id="email-input"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                  />
+                  <button type="submit">
+                    <img
+                      src="/images/arrow.svg"
+                      className="arrow"
+                      id="arrow"
+                      alt=""
+                    />
+                  </button>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
 

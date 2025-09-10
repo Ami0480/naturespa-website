@@ -13,7 +13,7 @@ export default function Header() {
     <div>
       <header>
         <div className="container">
-          <div className="navbar">
+          <div className="navbar-container">
             <Link to="/">
               <img src="/images/logo.svg" className="logo" alt="" />
             </Link>
@@ -24,20 +24,20 @@ export default function Header() {
               alt=""
               onClick={() => setMenuOpen(true)}
             />
-            <div className="navbar-desktop desktop-only">
-              <Link to="/" className="button-link">
+            <div className="navbar desktop-only">
+              <Link to="/" className="text-link">
                 Home
               </Link>
-              <Link to="/about" className="button-link">
+              <Link to="/about" className="text-link">
                 About
               </Link>
-              <Link to="/menu" className="button-link">
+              <Link to="/menu" className="text-link">
                 Menu
               </Link>
-              <Link to="/product" className="button-link">
+              <Link to="/product" className="text-link">
                 Product
               </Link>
-              <Link to="/booking" className="button-link">
+              <Link to="/booking" className="button-link header">
                 Book Now
               </Link>
             </div>
@@ -57,20 +57,20 @@ export default function Header() {
               onClick={() => setMenuOpen(false)}
             />
           </div>
-          <div className="navbar-desktop mobile-only">
-            <Link to="/" className="button-link-open">
+          <div className="navbar mobile-only">
+            <Link to="/" className="text-link">
               Home
             </Link>
-            <Link to="/about" className="button-link-open">
+            <Link to="/about" className="text-link">
               About
             </Link>
-            <Link to="/menu" className="button-link-open">
+            <Link to="/menu" className="text-link">
               Menu
             </Link>
-            <Link to="/product" className="button-link-open">
+            <Link to="/product" className="text-link">
               Product
             </Link>
-            <Link to="/booking" className="button-link-open-booking">
+            <Link to="/booking" className="button-link button-link--white">
               Book Now
             </Link>
           </div>
