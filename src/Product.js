@@ -54,7 +54,7 @@ export default function Product({ setSubmitted }) {
               />
               <img
                 src="images/product-img-second-one.png"
-                className="about-us-img second"
+                className="about-us-img second desktop-only"
                 alt=""
               />
             </div>
